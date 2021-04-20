@@ -65,6 +65,7 @@ Summary:	Qt5 SerialBus - development files
 Summary(pl.UTF-8):	Biblioteka Qt5 SerialBus - pliki programistyczne
 Group:		X11/Development/Libraries
 Requires:	Qt5Core-devel >= %{qtbase_ver}
+Requires:	Qt5SerialBus = %{version}-%{release}
 
 %description -n Qt5SerialBus-devel
 Qt5 SerialBus - development files.
