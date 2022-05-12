@@ -8,12 +8,12 @@
 Summary:	The Qt5 SerialBus library
 Summary(pl.UTF-8):	Biblioteka Qt5 SerialBus
 Name:		qt5-%{orgname}
-Version:	5.15.2
+Version:	5.15.4
 Release:	1
 License:	LGPL v3 or GPL v2+ or commercial
 Group:		X11/Libraries
-Source0:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/%{orgname}-everywhere-src-%{version}.tar.xz
-# Source0-md5:	1e55c59d7c16c6d43c08bbaa8094007a
+Source0:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/%{orgname}-everywhere-opensource-src-%{version}.tar.xz
+# Source0-md5:	c7ebd2f245124d24f8cadaa8c9d59c6a
 URL:		https://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Network-devel >= %{qtbase_ver}
@@ -134,12 +134,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libQt5*.so.5.??
 # obsoleted by pkg-config
 %{__rm} $RPM_BUILD_ROOT%{_libdir}/libQt5*.la
-
-# remove compiled examples (package only sources)
-for d in $RPM_BUILD_ROOT%{_examplesdir}/qt5/serialbus/* ; do
-	[ -d "$d" -a -x "$d/$(basename $d)" ] && %{__rm} "$d/$(basename $d)"
-done
-%{__rm} $RPM_BUILD_ROOT%{_examplesdir}/qt5/serialbus/modbus/{adueditor/adueditor,master/modbusmaster,slave/modbusslave}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
