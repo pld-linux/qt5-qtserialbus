@@ -8,12 +8,12 @@
 Summary:	The Qt5 SerialBus library
 Summary(pl.UTF-8):	Biblioteka Qt5 SerialBus
 Name:		qt5-%{orgname}
-Version:	5.15.5
+Version:	5.15.6
 Release:	1
 License:	LGPL v3 or GPL v2+ or commercial
 Group:		X11/Libraries
 Source0:	https://download.qt.io/official_releases/qt/5.15/%{version}/submodules/%{orgname}-everywhere-opensource-src-%{version}.tar.xz
-# Source0-md5:	6b24e3475ec92d89210ea257c3b74731
+# Source0-md5:	88f038df4b998d1d404bee85a25a5b61
 URL:		https://www.qt.io/
 BuildRequires:	Qt5Core-devel >= %{qtbase_ver}
 BuildRequires:	Qt5Network-devel >= %{qtbase_ver}
