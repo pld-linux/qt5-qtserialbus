@@ -51,7 +51,7 @@ Ten pakiet zawiera bibliotekę Qt5 SerialBus.
 Summary:	The Qt5 SerialBus library
 Summary(pl.UTF-8):	Biblioteka Qt5 SerialBus
 Group:		X11/Libraries
-Requires:	Qt5Core >= %{qtbase_ver}
+%requires_eq_to	Qt5Core Qt5Core-devel
 Requires:	Qt5Network >= %{qtbase_ver}
 
 %description -n Qt5SerialBus
